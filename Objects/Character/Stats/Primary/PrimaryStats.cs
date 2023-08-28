@@ -17,14 +17,14 @@ namespace The_Waste_Land.Objects.Character.Stats.Primary
         public PrimaryStat Charisma { get; set; }
         public PrimaryStat Luck { get; set; }
 
-        public PrimaryStats()
+        public PrimaryStats(int level = 5)
         {
-            Strength = new Strength();
-            Wisdom = new Wisdom();
-            Intelligence = new Intelligence();
-            Perception = new Perception();
-            Endurance = new Endurance();
-            Dexterity = new Dexterity();
+            Strength = new Strength(level);
+            Wisdom = new Wisdom(level);
+            Intelligence = new Intelligence(level);
+            Perception = new Perception(level);
+            Endurance = new Endurance(level);
+            Dexterity = new Dexterity(level);
         }
     }
 }

@@ -8,33 +8,26 @@ namespace The_Waste_Land.Objects.Character.Stats.Primary
     {
         public int StatValue { get; set; }
 
-        public PrimaryStat()
+        public PrimaryStat(int level = 5)
         {
-            StatValue = GeneratePrimaryStatValue();
+            StatValue = GeneratePrimaryStatValue(level);
         }
 
-        // Roll 5d5, discard lowest, return sum (will be between 4-20) 
-        public int GeneratePrimaryStatValue()
+        // Roll {level}d4, return sum as stat value (result is between 4-20)
+        public int GeneratePrimaryStatValue(int numDice = 5)
         {
             var rng = new Random();
-            int[] statList = new int[5];
+            int[] statList = new int[numDice];
             int i = 0;
-            int lowRoll = 5;
-            int lowRollIndex = 0;
+            int highRoll = 4;
 
             while (i < statList.Length)
             {
-                var roll = rng.Next(1, 6);
+                var roll = rng.Next(1, highRoll + 1); // +1 because Next() doesn't include upper bound
                 statList[i] = roll;
-                if (lowRoll > roll)
-                {
-                    lowRoll = roll;
-                    lowRollIndex = i;
-                }
                 i++;
             }
 
-            statList[lowRollIndex] = 0;
             int total = 0;
 
             foreach (var item in statList)

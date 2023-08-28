@@ -6,10 +6,11 @@ namespace The_Waste_Land.Objects.Character.Stats.Primary
 {
     public class Wisdom : PrimaryStat
     {
-        public Wisdom()
+        public Wisdom(int level = 5) : base()
         {
             Name = "Wisdom";
             Description = "Willpower, common sense, intuition. Knowing from experience.";
+            StatValue = GeneratePrimaryStatValue(level);
         }
     }
 }

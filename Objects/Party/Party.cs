@@ -6,11 +6,19 @@ namespace The_Waste_Land.Objects.Party
 {
     internal class Party
     {
-        //public Character[] Characters;
+        public List<Character.Character> PartyMembers;
 
         public Party()
         {
+            PartyMembers = new List<Character.Character>();
+        }
 
+        public void PrintPartyCharacterSheets()
+        {
+            foreach (var partyMember in PartyMembers)
+            {
+                partyMember.PrintCharacterSheet();
+            }
         }
     }
 }

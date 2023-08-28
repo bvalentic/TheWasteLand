@@ -8,7 +8,7 @@ using The_Waste_Land.Objects.Character.Stats.Secondary;
 
 namespace The_Waste_Land.Objects.Character
 {
-    internal class Character
+    public class Character
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -17,12 +17,20 @@ namespace The_Waste_Land.Objects.Character
         public CharacterClass CharacterClass { get; set; }
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats SecondaryStats { get; set; }
-        public Character(string name, int level = 1) 
+        public Character(string name, int level)
         {
             Name = name;
             Level = level;
-            PrimaryStats = new PrimaryStats();
+            PrimaryStats = new PrimaryStats(level);
             SecondaryStats = new SecondaryStats(PrimaryStats);
+        }
+        public Character(string name, int level, CharacterClass characterClass) 
+        {
+            Name = name;
+            Level = level;
+            PrimaryStats = new PrimaryStats(level);
+            SecondaryStats = new SecondaryStats(PrimaryStats);
+            CharacterClass = characterClass;
         }
 
         public void PrintCharacterSheet()

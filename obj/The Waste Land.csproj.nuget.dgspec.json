@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj": {}
+    "X:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj": {
+    "X:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj",
+        "projectUniqueName": "X:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj",
         "projectName": "The Waste Land",
-        "projectPath": "C:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj",
+        "projectPath": "X:\\Users\\rvale\\source\\repos\\The Waste Land\\The Waste Land.csproj",
         "packagesPath": "C:\\Users\\rvale\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rvale\\source\\repos\\The Waste Land\\obj\\",
+        "outputPath": "X:\\Users\\rvale\\source\\repos\\The Waste Land\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rvale\\AppData\\Roaming\\NuGet\\NuGet.Config",

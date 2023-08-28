@@ -7,9 +7,9 @@ namespace The_Waste_Land.Objects.Character.Classes
         public string ClassName { get; set; }
         public string ClassDescription { get; set; }
         public int Level { get; set; }
-        public CharacterClass()
+        public CharacterClass(int level = 1)
         {
-
+            Level = level;
         }
     }
 }

@@ -12,3 +12,17 @@ C:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Lan
 C:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.dll
 C:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.pdb
 C:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.genruntimeconfig.cache
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.csproj.AssemblyReference.cache
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.GeneratedMSBuildEditorConfig.editorconfig
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.AssemblyInfoInputs.cache
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.AssemblyInfo.cs
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.csproj.CoreCompileInputs.cache
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.dll
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.pdb
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.exe
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.deps.json
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.runtimeconfig.json
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.runtimeconfig.dev.json
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.dll
+X:\Users\rvale\source\repos\The Waste Land\bin\Debug\netcoreapp3.1\The Waste Land.pdb
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.genruntimeconfig.cache

@@ -4,24 +4,36 @@ using System.Text;
 
 namespace The_Waste_Land.Enums
 {
-    internal class ClassEnums
+    public class ClassEnums
     {
-        enum PartyClass
+        enum StarterClass
         {
             Squire, //Str
+            Disciple, //Wis
             Adept, //Int
             Tracker, //Per
-            Rogue, //Dex
-            Disciple, //Wis
-            Athlete //End
+            Athlete, //End
+            Rogue //Dex
         }
-
+        
         enum SquireClass
         {
             Squire,
             Knight,
             Crusader,
-            Samurai
+            Samurai,
+            Barbarian,
+            Berserker,
+            RedMonk
+        }
+
+        enum SoldierClass
+        {
+            Soldier,
+            Grenadier,
+            Commando,
+            Operator,
+            Guerrilla
         }
 
         enum AdeptClass
@@ -29,7 +41,8 @@ namespace The_Waste_Land.Enums
             Adept,
             Wizard,
             Sorcerer,
-            Summoner
+            Summoner,
+            BlueMonk
         }
 
         enum TrackerClass
@@ -58,7 +71,10 @@ namespace The_Waste_Land.Enums
             Priest,
             Exorcist,
             Inquisitor,
-            Monk
+            BlackMonk,
+            WhiteMonk,
+            RedMonk,
+            BlueMonk
         }
 
         enum AthleteClass
@@ -67,7 +83,8 @@ namespace The_Waste_Land.Enums
             Acrobat,
             Runner,
             MartialArtist,
-            Boxer
+            Boxer,
+            WhiteMonk
         }
 
         enum ScholarClass
@@ -86,10 +103,7 @@ namespace The_Waste_Land.Enums
             Gunslinger,
             Marksman,
             Sharpshooter,
-            Sniper,
-            Guerilla,
-            Commando,
-            Operator
+            Sniper
         }
 
         enum EnemyClass
