@@ -5,26 +5,54 @@ using The_Waste_Land.Objects.Party;
 
 namespace The_Waste_Land.Game
 {
-    static class CombatEngine
+    public class CombatEngine
     {
-        public static void RunFullCombatEncounter(PlayerParty playerParty, EnemyParty enemyParty)
+        public PlayerParty PlayerParty;
+        public EnemyParty EnemyParty;
+        public bool fighting;
+        public CombatEngine(PlayerParty playerParty, EnemyParty enemyParty)
+        {
+            PlayerParty = playerParty;
+            EnemyParty = enemyParty;
+        }
+        public void RunFullCombatEncounter()
         {
             Setup();
 
-
+            
+            while (fighting)
+            {
+                if (PlayerParty.isDead())
+                {
+                    PartyDeath();
+                }
+                else if (EnemyParty.isDead())
+                {
+                    Rewards();
+                }
+                else
+                {
+                    CombatLoop(); 
+                }
+            }
         }
 
-        static void Setup()
+        public void Setup()
+        {
+            fighting = true;
+        }
+
+        public void CombatLoop()
         {
 
         }
 
-        static void Rewards()
+        public void Rewards()
         {
 
         }
 
-        static void PartyDeath()
+        public void PartyDeath()
         {
 
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace The_Waste_Land.Objects.Party
 {
-    internal class Party
+    public class Party
     {
         public List<Character.Character> PartyMembers;
 
@@ -19,6 +19,15 @@ namespace The_Waste_Land.Objects.Party
             {
                 partyMember.PrintCharacterSheet();
             }
+        }
+        public bool isDead()
+        {
+            foreach (var partyMember in PartyMembers)
+            {
+                if (partyMember.SecondaryStats.HitPoints.StatValue > 0) return false;
+            }
+
+            return true;
         }
     }
 }

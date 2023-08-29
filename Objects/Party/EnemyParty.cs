@@ -4,7 +4,7 @@ using System.Text;
 
 namespace The_Waste_Land.Objects.Party
 {
-    internal class EnemyParty : Party
+    public class EnemyParty : Party
     {
         public EnemyParty()
         {
