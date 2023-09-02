@@ -4,49 +4,55 @@ using System.Text;
 using The_Waste_Land.Objects.Character;
 using The_Waste_Land.Objects.Character.Classes.EnemyClass.cs;
 using The_Waste_Land.Objects.Character.Classes.PartyClass.cs;
+using The_Waste_Land.Objects.Character.Equipment.Weapons;
 using The_Waste_Land.Objects.Party;
 
 namespace The_Waste_Land.Game
 {
-    internal static class Game
+    public static class Game
     {
-        public static void RunGame()
+        public static void NewGame()
         {
-            Console.WriteLine("The Waste Land");
+            Console.WriteLine("The Waste Land\nWelcome! What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"\nHello {name}! Generating new character. . .");
 
-            Character Roland = new PartyMember("Roland", 5);
-            Roland.CharacterClass = new Squire();
+            Character PlayerCharacter = new PartyMember(name, 5);
+            PlayerCharacter.CharacterClass = new Squire();
+            MeleeWeapon shortSword = new MeleeWeapon(5, 10, Enums.Rating.Good, 2.0, 1.0, 5);
+            PlayerCharacter.EquippedItems.Weapon = shortSword;
+            var playerParty = new PlayerParty();
+            playerParty.PartyMembers.Add(PlayerCharacter);
 
             Console.WriteLine("\nParty:\n");
 
-            Roland.PrintCharacterSheet();
+            PlayerCharacter.PrintCharacterSheet();
 
             // TODO: Generate 3 Lv.1 bandits, fight Roland, win rewards; repeat
 
-            Console.WriteLine("Ready to begin? (y/n) ");
+            Console.WriteLine("Ready to begin? (y/n)");
             var key = Console.ReadLine();
 
             if (key == "y")
             {
                 Console.WriteLine("Okay! Let's start!");
 
-                BeginSimpleLoop();
+                BeginSimpleLoop(playerParty);
             }
             else
             {
                 Console.WriteLine("Okay then, see you later! \n\n **Press any key to exit**");
             }
-                Console.ReadKey();
+            Console.ReadKey();
         }
 
-        public static void BeginSimpleLoop()
+        public static void BeginSimpleLoop(PlayerParty playerParty)
         {
             Console.WriteLine("\nBeginning Simple Loop. . .\n");
 
             var enemyParty = CreateSimpleBanditParty();
-            var playerParty = new PlayerParty();
 
-            enemyParty.PrintPartyCharacterSheets();
+            enemyParty.PrintSimplePartyCharacterSheets();
 
             playerParty.Fight(enemyParty);
         }
@@ -60,12 +66,36 @@ namespace The_Waste_Land.Game
             bandit2.CharacterClass = new Bandit();
             bandit3.CharacterClass = new Bandit();
 
+            MeleeWeapon dagger = new MeleeWeapon(1, 2, Enums.Rating.Poor, 1.0, 1.0, 1);
+            bandit1.EquippedItems.Weapon = dagger;
+            bandit2.EquippedItems.Weapon = dagger;
+            bandit3.EquippedItems.Weapon = dagger;
+
             var enemyParty = new EnemyParty();
             enemyParty.PartyMembers.Add(bandit1);
             enemyParty.PartyMembers.Add(bandit2);
             enemyParty.PartyMembers.Add(bandit3);
 
             return enemyParty;
+        }
+
+        public static void GameOver()
+        {
+            Console.WriteLine("You died! Game over, man!");
+            Console.WriteLine("Play again? (y/n)");
+            string playAgain = Console.ReadLine();
+
+            if (playAgain == "y")
+            {
+                Console.WriteLine("Okay! One more time!");
+
+                NewGame();
+            }
+            else
+            {
+                Console.WriteLine("Okay then, see you later! \n\n **Press any key to exit**");
+                Console.ReadKey();
+            }
         }
     }
 }

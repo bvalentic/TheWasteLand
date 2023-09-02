@@ -10,6 +10,7 @@ namespace The_Waste_Land.Objects.Character.Stats.Secondary
         public DamageMelee DamageMelee { get; set; }
         public Mana Mana { get; set; }
         public DodgeChance DodgeChance { get; set; }
+        public MeleeAttackTimeModifier MeleeAttackTimeModifier { get; set; }
         public PrimaryStats PrimaryStats { get; set; }
         public SecondaryStats(PrimaryStats primaryStats)
         {
@@ -19,6 +20,7 @@ namespace The_Waste_Land.Objects.Character.Stats.Secondary
             DamageMelee = new DamageMelee(primaryStats);
             Mana = new Mana(primaryStats);
             DodgeChance = new DodgeChance(primaryStats);
+            MeleeAttackTimeModifier = new MeleeAttackTimeModifier(primaryStats);
         }
     }
 }

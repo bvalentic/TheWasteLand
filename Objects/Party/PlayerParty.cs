@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using The_Waste_Land.Game;
+using The_Waste_Land.Game.Combat;
 
 namespace The_Waste_Land.Objects.Party
 {

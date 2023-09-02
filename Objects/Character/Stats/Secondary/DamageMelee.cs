@@ -19,5 +19,10 @@ namespace The_Waste_Land.Objects.Character.Stats.Secondary
 
             return Math.Round(modifier, 3);
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + "x";
+        }
     }
 }

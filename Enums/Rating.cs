@@ -4,7 +4,7 @@ using System.Text;
 
 namespace The_Waste_Land.Enums
 {
-    internal enum Rating
+    public enum Rating
     {
         Poor,
         Fair,

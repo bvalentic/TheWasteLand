@@ -5,7 +5,7 @@ using The_Waste_Land.Enums;
 
 namespace The_Waste_Land.Objects.Character.Equipment
 {
-    internal class Equipment
+    public class Equipment
     {
         public string Name;
         public string Description;

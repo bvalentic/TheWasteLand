@@ -20,6 +20,15 @@ namespace The_Waste_Land.Objects.Party
                 partyMember.PrintCharacterSheet();
             }
         }
+
+        public void PrintSimplePartyCharacterSheets()
+        {
+            foreach (var partyMember in PartyMembers)
+            {
+                partyMember.PrintSimpleCharacterSheet();
+            }
+        }
+
         public bool isDead()
         {
             foreach (var partyMember in PartyMembers)

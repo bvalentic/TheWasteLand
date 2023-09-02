@@ -4,9 +4,9 @@ using System.Text;
 
 namespace The_Waste_Land.Objects.Character.Classes.EnemyClass.cs
 {
-    internal class Bandit : EnemyClass
+    public class Bandit : EnemyClass
     {
-        internal Bandit()
+        public Bandit()
         {
             ClassName = "Bandit";
             ClassDescription = "Highwaymen, thieves, rogues - call them whatever you what, they want your money.";

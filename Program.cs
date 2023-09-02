@@ -6,7 +6,7 @@ namespace The_Waste_Land
     {
         static void Main(string[] args)
         {
-            Game.Game.RunGame();
+            Game.Game.NewGame();
         }
     }
 }
