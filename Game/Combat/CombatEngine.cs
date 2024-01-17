@@ -15,6 +15,7 @@ namespace The_Waste_Land.Game.Combat
         public int TotalNumCharacters;
 
         public List<CombatQueueObject> CombatQueue;
+        private Random rng = new Random();
 
         public double BattleCounter;
         public double tick;
@@ -137,17 +138,31 @@ namespace The_Waste_Land.Game.Combat
 
         public void Attack(Character attacker, Character defender)
         {
-            var attackDamage = Math.Round(attacker.EquippedItems.Weapon.Damage * attacker.SecondaryStats.DamageMelee.StatValue, 2);
-            Console.WriteLine($"{attacker.Name} attacks {defender.Name} for {attackDamage} damage!");
-            var newHitPoints = Math.Round(defender.SecondaryStats.HitPoints.StatValue - attackDamage, 2);
-            defender.SecondaryStats.HitPoints.StatValue = newHitPoints;
-            Console.WriteLine($"{defender.Name} has {defender.SecondaryStats.HitPoints.StatValue} hit points remaining!");
+            Console.WriteLine($"\n{attacker.Name} attacks {defender.Name}!");
+            // determine if hit
+            var dodgeChance = defender.SecondaryStats.DodgeChance.StatValue;
+            var isHit = (rng.NextDouble() > dodgeChance);
+
+            if (isHit)
+            {
+                var attackDamage = Math.Round(attacker.EquippedItems.Weapon.Damage * attacker.SecondaryStats.DamageMelee.StatValue, 2);
+                // log damage
+                Console.WriteLine($"{attacker.Name} hits for {attackDamage} damage!");
+                var newHitPoints = Math.Round(defender.SecondaryStats.HitPoints.StatValue - attackDamage, 2);
+                defender.SecondaryStats.HitPoints.StatValue = newHitPoints;
+                Console.WriteLine($"{defender.Name} has {defender.SecondaryStats.HitPoints.StatValue} hit points remaining!");
+            }
+            else
+            {
+                Console.WriteLine($"{defender.Name} dodges the attack!");
+            }
+            
             if (defender.IsDead())
             {
                 Console.WriteLine($"{defender.Name} dies!");
                 defender.Alive = false;
             }
-            Console.WriteLine("(Press any key to continue.)");
+            Console.WriteLine("(Press any key to continue.)\n");
             Console.ReadKey();
         }
 
@@ -156,6 +171,7 @@ namespace The_Waste_Land.Game.Combat
             fighting = false;
             Console.WriteLine("You won! Rewards time!");
             // generate loot based on avg enemy level
+
         }
 
         public void PartyDeath()

@@ -19,12 +19,12 @@ namespace The_Waste_Land.Objects.Character.Stats.Secondary
             double perValue = primaryStats.Perception.StatValue + primaryStats.Perception.StatValue % 3;
             double value = Math.Pow((dexValue + perValue) / 75, 2);
 
-            return Math.Round(value * 100, 2);
+            return Math.Round(value, 4);
         }
 
         public override string ToString()
         {
-            return base.ToString() + "%";
+            return Math.Round(base.StatValue * 100, 2).ToString() + "%";
         }
     }
 }
