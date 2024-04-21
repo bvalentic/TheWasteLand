@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("The Waste Land")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8cd2fc2b322dc6a88cde4469fdb0f40ea0ebccb")]
 [assembly: System.Reflection.AssemblyProductAttribute("The Waste Land")]
 [assembly: System.Reflection.AssemblyTitleAttribute("The Waste Land")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
