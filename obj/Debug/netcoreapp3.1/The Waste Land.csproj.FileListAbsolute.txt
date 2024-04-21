@@ -25,3 +25,4 @@ X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Lan
 X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.dll
 X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.pdb
 X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.genruntimeconfig.cache
+X:\Users\rvale\source\repos\The Waste Land\obj\Debug\netcoreapp3.1\The Waste Land.sourcelink.json

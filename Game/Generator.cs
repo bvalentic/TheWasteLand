@@ -6,6 +6,7 @@ using The_Waste_Land.Lists;
 using The_Waste_Land.Objects.Character;
 using The_Waste_Land.Objects.Character.Classes;
 using The_Waste_Land.Objects.Character.Classes.EnemyClass.cs;
+using The_Waste_Land.Objects.Character.Equipment;
 
 namespace The_Waste_Land.Game
 {
@@ -27,17 +28,19 @@ namespace The_Waste_Land.Game
             return character;
         }
 
-        public static Enemy GenerateEnemy(string name, int level, string className)
+        public static Enemy GenerateEnemy(string name, int level, CharacterClass characterClass)
         {
             
             Enemy enemy = new Enemy(name, level);
-
-            foreach (var starterClass in StarterClasses)
-            {
-                // somehow set enemy class to that type
-            }
+            enemy.CharacterClass = characterClass;
 
             return enemy;
+        }
+
+        public static Equipment GenerateEquipment(int level, int value, Rating rating)
+        {
+            Equipment equipment = new Equipment(level, value, rating);
+            return equipment;
         }
     }
 }
