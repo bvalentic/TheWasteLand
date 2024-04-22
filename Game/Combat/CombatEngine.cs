@@ -60,7 +60,7 @@ namespace The_Waste_Land.Game.Combat
 
             foreach (var item in CombatQueue)
             {
-                item.Action = Actions.Attack; // hard-code to always attack
+                item.Action = Actions.Attack; // hard-code to always attack for now
             }
         }
 

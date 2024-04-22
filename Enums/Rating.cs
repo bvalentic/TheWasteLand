@@ -10,7 +10,7 @@ namespace The_Waste_Land.Enums
         Fair,
         Good,
         Excellent,
-        Exceptional, //xxceptional
-        Exemplary //xxxemplary
+        Exceptional, 
+        Exemplary 
     }
 }

@@ -28,8 +28,6 @@ namespace The_Waste_Land.Game
 
             PlayerCharacter.PrintCharacterSheet();
 
-            // TODO: Generate 3 Lv.1 bandits, fight Roland, win rewards; repeat
-
             Console.WriteLine("Ready to begin? (y/n)");
             var key = Console.ReadLine();
 
